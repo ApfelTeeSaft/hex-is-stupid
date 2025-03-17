@@ -1,9 +1,13 @@
 // dllmain.cpp : Defines the entry point for the DLL application
 #include <Windows.h>
+#include <iostream>
 
 
 void Main()
 {
+    AllocConsole();
+    FILE* File;
+    freopen_s(&File, "CONOUT$", "w+", stdout);
     SetConsoleTitleA("Legacy GS | Hooking");
 }
 
